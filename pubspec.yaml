@@ -9,9 +9,11 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.5
+  dio: ^5.1.1
   flutter:
     sdk: flutter
   flutter_mobx: ^2.0.6+5
+  flutter_modular: ^5.0.3
   mobx: ^2.1.4
   mocktail: ^0.3.0
   very_good_analysis: ^4.0.0+1
