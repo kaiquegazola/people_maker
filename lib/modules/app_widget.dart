@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({super.key});
+  AppWidget({super.key}) {
+    Modular.setInitialRoute('/people/');
+  }
 
   @override
   Widget build(BuildContext context) {

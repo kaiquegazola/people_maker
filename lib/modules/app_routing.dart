@@ -1,8 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:people_maker/modules/people/people_module.dart';
 
 class AppRouting {
   static final List<ModularRoute> routes = [
-    ChildRoute<dynamic>('/', child: (context, args) => Container()),
+    ModuleRoute<void>(
+      '/people/',
+      module: PeopleModule(),
+    ),
   ];
 }
