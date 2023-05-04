@@ -10,6 +10,8 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.5
   dio: ^5.1.1
+  equatable: ^2.0.5
+  flag: ^6.0.0
   flutter:
     sdk: flutter
   flutter_mobx: ^2.0.6+5
