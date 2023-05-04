@@ -1,4 +1,4 @@
-import 'package:flag/flag_widget.dart';
+import 'package:flag/flag.dart';
 import 'package:flutter/material.dart';
 import 'package:people_maker/ui/ui.dart';
 
@@ -87,30 +87,31 @@ class PeopleCardWidget extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    if (address != null)
-                      _textIcon(
-                        Icons.location_on_outlined,
-                        address!,
-                        context,
-                      ),
-                    if (email != null)
-                      _textIcon(
-                        Icons.email_outlined,
-                        email!,
-                        context,
-                      ),
-                    if (identity != null && (identity?.isNotEmpty ?? false))
-                      _textIcon(
-                        Icons.verified_user_outlined,
-                        identity!,
-                        context,
-                      ),
-                  ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (address != null)
+                        _textIcon(
+                          Icons.location_on_outlined,
+                          address!,
+                          context,
+                        ),
+                      if (email != null)
+                        _textIcon(
+                          Icons.email_outlined,
+                          email!,
+                          context,
+                        ),
+                      if (identity != null && (identity?.isNotEmpty ?? false))
+                        _textIcon(
+                          Icons.verified_user_outlined,
+                          identity!,
+                          context,
+                        ),
+                    ],
+                  ),
                 ),
-                const Spacer(),
                 const Icon(
                   Icons.arrow_forward_ios,
                 ),
@@ -128,9 +129,13 @@ class PeopleCardWidget extends StatelessWidget {
       children: [
         Icon(icon),
         const SizedBox(width: 12),
-        Text(
-          text,
-          style: Theme.of(context).textTheme.titleSmall,
+        Flexible(
+          child: Text(
+            text,
+            style: Theme.of(context).textTheme.titleSmall,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ],
     );
