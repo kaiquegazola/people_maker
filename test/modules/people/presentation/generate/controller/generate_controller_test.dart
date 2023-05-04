@@ -69,10 +69,6 @@ void main() {
 
   test('should return identification name and value concatenated', () async {
     // Arrange
-    const identification = IdentificationEntity(
-      name: 'SSN',
-      value: '123-45-6789',
-    );
     controller.user = userEntityMock;
 
     // Act
