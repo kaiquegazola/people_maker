@@ -4,3 +4,7 @@ linter:
     public_member_api_docs: false
     always_use_package_imports: false
     one_member_abstracts: false
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"

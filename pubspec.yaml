@@ -8,6 +8,7 @@ environment:
   sdk: '>=2.19.6 <3.0.0'
 
 dependencies:
+  awesome_bottom_bar: ^1.2.2
   cupertino_icons: ^1.0.5
   dio: ^5.1.1
   equatable: ^2.0.5
@@ -18,6 +19,7 @@ dependencies:
   flutter_modular: ^5.0.3
   flutter_svg: ^1.1.6
   google_fonts: ^4.0.4
+  lottie: ^2.3.2
   mobx: ^2.1.4
   mocktail: ^0.3.0
   very_good_analysis: ^4.0.0+1
@@ -34,3 +36,4 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/lottie/

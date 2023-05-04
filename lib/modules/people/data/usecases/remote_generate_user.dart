@@ -15,7 +15,9 @@ class RemoteGenerateUser implements GenerateUser {
       final result = await client.get(url: 'https://randomuser.me/api');
       final body = result.body;
       if (body != null) {
-        final results = body['results'] as List<Map<String, dynamic>>;
+        final results = List<Map<String, dynamic>>.from(
+          body['results'] as List,
+        );
         return UserModel.fromJson(results.first);
       }
       throw UnexpectedError();
