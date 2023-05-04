@@ -42,6 +42,66 @@ class UserModel extends UserEntity {
     );
   }
 
+  factory UserModel.fromEntity(UserEntity entity) {
+    return UserModel(
+      gender: entity.gender,
+      name: entity.name,
+      location: entity.location,
+      email: entity.email,
+      login: entity.login,
+      phone: entity.phone,
+      cell: entity.cell,
+      identification: entity.identification,
+      picture: entity.picture,
+      nat: entity.nat,
+      dateOfBirth: entity.dateOfBirth,
+    );
+  }
+
+  UserModel copyWith({
+    String? gender,
+    NameEntity? name,
+    LocationEntity? location,
+    String? email,
+    LoginEntity? login,
+    String? phone,
+    String? cell,
+    IdentificationEntity? identification,
+    PictureEntity? picture,
+    String? nat,
+    String? dateOfBirth,
+  }) {
+    return UserModel(
+      gender: gender ?? this.gender,
+      name: name ?? this.name,
+      location: location ?? this.location,
+      email: email ?? this.email,
+      login: login ?? this.login,
+      phone: phone ?? this.phone,
+      cell: cell ?? this.cell,
+      identification: identification ?? this.identification,
+      picture: picture ?? this.picture,
+      nat: nat ?? this.nat,
+      dateOfBirth: dateOfBirth ?? this.dateOfBirth,
+    );
+  }
+
+  UserEntity toEntity() {
+    return UserEntity(
+      gender: gender,
+      name: name,
+      location: location,
+      email: email,
+      login: login,
+      phone: phone,
+      cell: cell,
+      identification: identification,
+      picture: picture,
+      nat: nat,
+      dateOfBirth: dateOfBirth,
+    );
+  }
+
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     final dob = <String, dynamic>{};
