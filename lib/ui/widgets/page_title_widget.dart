@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:people_maker/core/core.dart';
 import 'package:people_maker/ui/ui.dart';
 
-class GenerateTitleWidget extends StatelessWidget {
-  const GenerateTitleWidget({super.key});
+class PageTitleWidget extends StatelessWidget {
+  const PageTitleWidget({
+    required this.title,
+    required this.subTitle,
+    super.key,
+  });
+
+  final String title;
+  final String subTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class GenerateTitleWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            R.string.peopleMaker,
+            title,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: PeopleColors.neutral050,
                 ),
@@ -21,7 +27,7 @@ class GenerateTitleWidget extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
             child: Text(
-              R.string.generateSubtitle,
+              subTitle,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     color: PeopleColors.neutral100,
                   ),

@@ -4,8 +4,6 @@ import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/presentation/generate/generate.dart';
 import 'package:people_maker/ui/ui.dart';
 
-import 'widgets/widgets.dart';
-
 class GeneratePage extends StatelessWidget {
   const GeneratePage({
     required this.controller,
@@ -19,8 +17,12 @@ class GeneratePage extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const GenerateTitleWidget(),
+          PageTitleWidget(
+            title: R.string.peopleMaker,
+            subTitle: R.string.generateSubtitle,
+          ),
           Observer(
             builder: (_) {
               if (controller.isLoading) {
