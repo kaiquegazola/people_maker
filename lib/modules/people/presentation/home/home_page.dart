@@ -11,12 +11,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 0,
-        elevation: 0,
-        backgroundColor: PeopleColors.blue900,
-      ),
+    return PeopleScaffold(
       body: SafeArea(
         child: Stack(
           children: [
