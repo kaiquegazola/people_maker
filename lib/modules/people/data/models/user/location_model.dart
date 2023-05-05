@@ -1,3 +1,4 @@
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/domain/entities/entities.dart';
 
 class LocationModel extends LocationEntity {
@@ -22,6 +23,17 @@ class LocationModel extends LocationEntity {
       postcode: postCode is String ? postCode : '$postCode',
       street: street['name'] as String,
       number: street['number'] as int,
+    );
+  }
+
+  IsarLocation toIsar() {
+    return IsarLocation(
+      street: street,
+      city: city,
+      state: state,
+      country: country,
+      postcode: postcode,
+      number: number,
     );
   }
 

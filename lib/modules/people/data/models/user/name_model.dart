@@ -1,4 +1,5 @@
-import 'package:people_maker/modules/people/domain/entities/entities.dart';
+import 'package:people_maker/core/core.dart';
+import 'package:people_maker/modules/people/domain/domain.dart';
 
 class NameModel extends NameEntity {
   const NameModel({
@@ -14,6 +15,15 @@ class NameModel extends NameEntity {
       last: json['last'] as String,
     );
   }
+
+  IsarName toIsar() {
+    return IsarName(
+      title: title,
+      first: first,
+      last: last,
+    );
+  }
+
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['title'] = title;

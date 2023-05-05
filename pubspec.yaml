@@ -19,9 +19,12 @@ dependencies:
   flutter_modular: ^5.0.3
   flutter_svg: ^1.1.6
   google_fonts: ^4.0.4
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
   lottie: ^2.3.2
   mobx: ^2.1.4
   mocktail: ^0.3.0
+  path_provider: ^2.0.14
   very_good_analysis: ^4.0.0+1
 
 dev_dependencies:
@@ -29,6 +32,7 @@ dev_dependencies:
   flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
+  isar_generator: ^3.1.0+1
   mobx_codegen: ^2.2.0
 
 flutter:

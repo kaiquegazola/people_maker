@@ -13,6 +13,21 @@ class PeopleModule extends Module {
           ),
         ),
         Bind.factory(
+          (i) => IsarUserRepository(
+            isarDb: i.get(),
+          ),
+        ),
+        Bind.factory(
+          (i) => LocalSaveUser(
+            repository: i.get(),
+          ),
+        ),
+        Bind.factory(
+          (i) => LocalRemoveUser(
+            repository: i.get(),
+          ),
+        ),
+        Bind.factory(
           (i) => GenerateController(
             generateUser: i.get<RemoteGenerateUser>(),
           ),

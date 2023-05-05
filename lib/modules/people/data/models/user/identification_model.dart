@@ -1,3 +1,4 @@
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/domain/entities/entities.dart';
 
 class IdentificationModel extends IdentificationEntity {
@@ -10,6 +11,13 @@ class IdentificationModel extends IdentificationEntity {
     return IdentificationModel(
       name: json['name'] as String?,
       value: json['value'] as String?,
+    );
+  }
+
+  IsarIdentification toIsar() {
+    return IsarIdentification(
+      value: value,
+      name: name,
     );
   }
 

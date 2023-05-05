@@ -1,3 +1,4 @@
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/domain/entities/entities.dart';
 
 class LoginModel extends LoginEntity {
@@ -10,6 +11,13 @@ class LoginModel extends LoginEntity {
     return LoginModel(
       username: json['username'] as String,
       password: json['password'] as String,
+    );
+  }
+
+  IsarLogin toIsar() {
+    return IsarLogin(
+      username: username,
+      password: password,
     );
   }
 

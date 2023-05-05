@@ -1,3 +1,4 @@
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/domain/entities/entities.dart';
 
 import 'user.dart';
@@ -97,6 +98,23 @@ class UserModel extends UserEntity {
       cell: cell,
       identification: identification,
       picture: picture,
+      nat: nat,
+      dateOfBirth: dateOfBirth,
+    );
+  }
+
+  IsarUser toIsar() {
+    return IsarUser(
+      id: id,
+      gender: gender,
+      name: (name as NameModel).toIsar(),
+      location: (location as LocationModel).toIsar(),
+      email: email,
+      login: (login as LoginModel).toIsar(),
+      phone: phone,
+      cell: cell,
+      identification: (identification as IdentificationModel).toIsar(),
+      picture: (picture as PictureModel).toIsar(),
       nat: nat,
       dateOfBirth: dateOfBirth,
     );

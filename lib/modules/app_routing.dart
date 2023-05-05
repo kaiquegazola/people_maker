@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:people_maker/modules/guards/guards.dart';
 import 'package:people_maker/modules/people/people_module.dart';
 
 class AppRouting {
@@ -6,6 +7,9 @@ class AppRouting {
     ModuleRoute<void>(
       '/people/',
       module: PeopleModule(),
+      guards: [
+        AsyncBindingGuard(),
+      ],
     ),
   ];
 }

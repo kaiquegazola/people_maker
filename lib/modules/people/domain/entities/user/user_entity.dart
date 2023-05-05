@@ -19,8 +19,10 @@ class UserEntity extends Equatable {
     required this.picture,
     required this.nat,
     required this.dateOfBirth,
+    this.id,
   });
 
+  final int? id;
   final String gender;
   final NameEntity name;
   final LocationEntity location;

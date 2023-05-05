@@ -1,3 +1,4 @@
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/domain/entities/entities.dart';
 
 class PictureModel extends PictureEntity {
@@ -10,6 +11,13 @@ class PictureModel extends PictureEntity {
     return PictureModel(
       image: json['medium'] as String,
       thumbnail: json['thumbnail'] as String,
+    );
+  }
+
+  IsarPicture toIsar() {
+    return IsarPicture(
+      image: image,
+      thumbnail: thumbnail,
     );
   }
 
