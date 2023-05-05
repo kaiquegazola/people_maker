@@ -36,6 +36,8 @@ class GeneratePage extends StatelessWidget {
                 address: controller.user?.location.street,
                 email: controller.user?.email,
                 identity: controller.userIdentification,
+                isSaved: controller.isSaved,
+                onSave: controller.save,
               );
             },
           ),

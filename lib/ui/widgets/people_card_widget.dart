@@ -11,6 +11,8 @@ class PeopleCardWidget extends StatelessWidget {
     required this.address,
     required this.email,
     required this.identity,
+    required this.isSaved,
+    required this.onSave,
     super.key,
   });
 
@@ -21,6 +23,9 @@ class PeopleCardWidget extends StatelessWidget {
   final String? address;
   final String? email;
   final String? identity;
+
+  final bool isSaved;
+  final VoidCallback onSave;
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +123,13 @@ class PeopleCardWidget extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 32),
+          Center(
+            child: SaveButtonWidget(
+              isSaved: isSaved,
+              onSave: onSave,
+            ),
+          ),
+          const SizedBox(height: 16),
         ],
       ),
     );

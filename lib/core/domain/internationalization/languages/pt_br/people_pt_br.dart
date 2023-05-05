@@ -5,9 +5,6 @@ class PeoplePtBR implements People {
   String get generate => 'Gerar';
 
   @override
-  String get saved => 'Salvos';
-
-  @override
   String get generateSubtitle => 'Crie o seu mock de usuários personalizados';
 
   @override
@@ -15,4 +12,13 @@ class PeoplePtBR implements People {
 
   @override
   String get options => 'Opções de filtro';
+
+  @override
+  String get saved => 'Salvo';
+
+  @override
+  String get save => 'Salvar';
+
+  @override
+  String get savedItems => 'Salvos';
 }

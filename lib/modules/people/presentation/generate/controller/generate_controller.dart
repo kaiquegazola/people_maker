@@ -8,11 +8,17 @@ class GenerateController = GenerateControllerBase with _$GenerateController;
 abstract class GenerateControllerBase with Store {
   GenerateControllerBase({
     required this.generateUser,
+    required this.saveUser,
+    required this.removeUser,
   }) {
     generate();
   }
 
   final GenerateUser generateUser;
+  final SaveUser saveUser;
+  final RemoveUser removeUser;
+
+  int? id;
 
   @observable
   UserEntity? user;
@@ -42,13 +48,35 @@ abstract class GenerateControllerBase with Store {
   @observable
   bool isLoading = true;
 
+  @observable
+  bool isSaved = false;
+
   @action
   Future<void> generate() async {
     isLoading = true;
     try {
       final generatedUser = await generateUser.generate();
       user = generatedUser;
+      isSaved = false;
     } catch (_) {}
     isLoading = false;
+  }
+
+  @action
+  Future<void> save() async {
+    final user = this.user;
+    if (user != null) {
+      if (isSaved) {
+        final id = this.id;
+        if (id != null) {
+          await removeUser.remove(id);
+          isSaved = false;
+        }
+      } else {
+        final savedId = await saveUser.save(user);
+        id = savedId;
+        isSaved = true;
+      }
+    }
   }
 }

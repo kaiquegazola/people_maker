@@ -30,6 +30,8 @@ class PeopleModule extends Module {
         Bind.factory(
           (i) => GenerateController(
             generateUser: i.get<RemoteGenerateUser>(),
+            saveUser: i.get<LocalSaveUser>(),
+            removeUser: i.get<LocalRemoveUser>(),
           ),
         ),
       ];

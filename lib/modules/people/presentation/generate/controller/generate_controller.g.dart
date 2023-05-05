@@ -56,6 +56,22 @@ mixin _$GenerateController on GenerateControllerBase, Store {
     });
   }
 
+  late final _$isSavedAtom =
+      Atom(name: 'GenerateControllerBase.isSaved', context: context);
+
+  @override
+  bool get isSaved {
+    _$isSavedAtom.reportRead();
+    return super.isSaved;
+  }
+
+  @override
+  set isSaved(bool value) {
+    _$isSavedAtom.reportWrite(value, super.isSaved, () {
+      super.isSaved = value;
+    });
+  }
+
   late final _$generateAsyncAction =
       AsyncAction('GenerateControllerBase.generate', context: context);
 
@@ -64,11 +80,20 @@ mixin _$GenerateController on GenerateControllerBase, Store {
     return _$generateAsyncAction.run(() => super.generate());
   }
 
+  late final _$saveAsyncAction =
+      AsyncAction('GenerateControllerBase.save', context: context);
+
+  @override
+  Future<void> save() {
+    return _$saveAsyncAction.run(() => super.save());
+  }
+
   @override
   String toString() {
     return '''
 user: ${user},
 isLoading: ${isLoading},
+isSaved: ${isSaved},
 userName: ${userName},
 userIdentification: ${userIdentification}
     ''';

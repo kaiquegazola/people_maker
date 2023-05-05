@@ -5,9 +5,6 @@ class PeopleEnUS implements People {
   String get generate => 'Generate';
 
   @override
-  String get saved => 'Saved';
-
-  @override
   String get generateSubtitle => 'Generate your custom user details mock';
 
   @override
@@ -15,4 +12,13 @@ class PeopleEnUS implements People {
 
   @override
   String get options => 'Filter options';
+
+  @override
+  String get saved => 'Saved';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get savedItems => 'Saved';
 }
