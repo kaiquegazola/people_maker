@@ -13,9 +13,6 @@ class BottomNavigationWidget extends StatelessWidget {
     return NavigationListener(
       builder: (_, __) {
         return BottomBarInspiredFancy(
-          borderRadius: const BorderRadius.vertical(
-            top: Radius.circular(32),
-          ),
           items: bottomNavigationItems
               .map(
                 (e) => TabItem(
