@@ -54,7 +54,7 @@ void main() {
           'id': {'name': '', 'value': null},
           'picture': {
             'large': 'https://randomuser.me/api/portraits/women/57.jpg',
-            'medium': 'https://randomuser.me/api/portraits/med/women/57.jpg',
+            'medium': 'https://randomuser.me/api/portraits/women/57.jpg',
             'thumbnail':
                 'https://randomuser.me/api/portraits/thumb/women/57.jpg'
           },

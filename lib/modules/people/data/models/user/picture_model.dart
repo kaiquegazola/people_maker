@@ -9,7 +9,7 @@ class PictureModel extends PictureEntity {
 
   factory PictureModel.fromJson(Map<String, dynamic> json) {
     return PictureModel(
-      image: json['medium'] as String,
+      image: json['large'] as String,
       thumbnail: json['thumbnail'] as String,
     );
   }
@@ -23,7 +23,7 @@ class PictureModel extends PictureEntity {
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['medium'] = image;
+    map['large'] = image;
     map['thumbnail'] = thumbnail;
     return map;
   }

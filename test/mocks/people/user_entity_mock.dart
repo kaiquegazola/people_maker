@@ -46,7 +46,7 @@ const userValidJson = {
   'cell': '(25) 4095-1869',
   'id': {'name': 'CPF', 'value': '105.048.975-89'},
   'picture': {
-    'medium': 'https://randomuser.me/api/portraits/med/men/18.jpg',
+    'large': 'https://randomuser.me/api/portraits/men/18.jpg',
     'thumbnail': 'https://randomuser.me/api/portraits/thumb/men/18.jpg'
   },
   'nat': 'BR'

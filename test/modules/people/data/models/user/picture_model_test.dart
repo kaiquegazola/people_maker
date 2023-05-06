@@ -3,12 +3,12 @@ import 'package:people_maker/modules/people/data/data.dart';
 
 void main() {
   const validJson = {
-    'medium': 'https://randomuser.me/api/portraits/med/men/18.jpg',
+    'large': 'https://randomuser.me/api/portraits/men/18.jpg',
     'thumbnail': 'https://randomuser.me/api/portraits/thumb/men/18.jpg',
   };
 
   const pictureModel = PictureModel(
-    image: 'https://randomuser.me/api/portraits/med/men/18.jpg',
+    image: 'https://randomuser.me/api/portraits/men/18.jpg',
     thumbnail: 'https://randomuser.me/api/portraits/thumb/men/18.jpg',
   );
 

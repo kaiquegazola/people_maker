@@ -30,7 +30,7 @@ const userModel = UserModel(
     value: '105.048.975-89',
   ),
   picture: PictureModel(
-    image: 'https://randomuser.me/api/portraits/med/men/18.jpg',
+    image: 'https://randomuser.me/api/portraits/men/18.jpg',
     thumbnail: 'https://randomuser.me/api/portraits/thumb/men/18.jpg',
   ),
   nat: 'BR',
