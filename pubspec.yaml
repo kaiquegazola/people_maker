@@ -10,14 +10,14 @@ environment:
 dependencies:
   awesome_bottom_bar: ^1.2.2
   cupertino_icons: ^1.0.5
+  dash_flags: ^0.1.1
   dio: ^5.1.1
   equatable: ^2.0.5
-  flag: ^6.0.0
   flutter:
     sdk: flutter
   flutter_mobx: ^2.0.6+5
   flutter_modular: ^5.0.3
-  flutter_svg: ^1.1.6
+  flutter_svg: ^2.0.5
   google_fonts: ^4.0.4
   isar: ^3.1.0+1
   isar_flutter_libs: ^3.1.0+1

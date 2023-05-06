@@ -1,4 +1,4 @@
-import 'package:flag/flag.dart';
+import 'package:dash_flags/dash_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:people_maker/ui/ui.dart';
 
@@ -70,17 +70,10 @@ class PeopleCardWidget extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 16),
-                SizedBox(
-                  width: 32,
-                  height: 32,
-                  child: nationality != null
-                      ? Flag.fromString(
-                          nationality!,
-                          width: 32,
-                          height: 32,
-                        )
-                      : const SizedBox.shrink(),
-                ),
+                if (nationality != null)
+                  CountryFlag(
+                    country: Country.fromCode(nationality!),
+                  )
               ],
             ),
           ),
