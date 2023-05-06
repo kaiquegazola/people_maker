@@ -2,7 +2,7 @@
 
 people_maker is a mobile application that uses the randomuser.me API to generate realistic user profiles. It aims to provide developers and designers with easy-to-copy user generated data for various purposes, such as testing, prototyping and design.
 
-![Screenshots](screenshots/combinedd_images.jpg)
+![Screenshots](screenshots/combined_images.jpg)
 
 ## Features
 
