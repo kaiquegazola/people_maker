@@ -1,6 +1,7 @@
 import 'package:dash_flags/dash_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:people_maker/ui/colors/colors.dart';
+
 import 'widgets.dart';
 
 class LanguageButton extends StatelessWidget {
@@ -25,7 +26,7 @@ class LanguageButton extends StatelessWidget {
             iconSize: 100,
             onPressed: enabled ? changeLanguage : null,
             icon: CountryFlag(
-              height: 100,
+              height: 70,
               country: Country.fromCode(
                 locale.countryCode ?? '',
               ),
