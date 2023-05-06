@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/ui/colors/colors.dart';
 
 class LoadingWidget extends StatelessWidget {
@@ -13,7 +14,7 @@ class LoadingWidget extends StatelessWidget {
         Lottie.asset('assets/lottie/loading.json'),
         Align(
           child: Text(
-            'Carregando',
+            R.string.loading,
             style: Theme.of(context).textTheme.displaySmall?.copyWith(
               color: PeopleColors.neutral800,
               decorationStyle: TextDecorationStyle.dashed,
