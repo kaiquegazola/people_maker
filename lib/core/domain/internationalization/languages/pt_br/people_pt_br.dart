@@ -11,9 +11,6 @@ class PeoplePtBR implements People {
   String get newUser => 'Gerar usuário';
 
   @override
-  String get options => 'Opções de filtro';
-
-  @override
   String get saved => 'Salvo';
 
   @override

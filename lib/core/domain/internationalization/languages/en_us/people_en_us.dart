@@ -11,9 +11,6 @@ class PeopleEnUS implements People {
   String get newUser => 'Generate user';
 
   @override
-  String get options => 'Filter options';
-
-  @override
   String get saved => 'Saved';
 
   @override

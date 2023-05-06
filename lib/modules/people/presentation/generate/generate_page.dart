@@ -42,37 +42,13 @@ class GeneratePage extends StatelessWidget {
             },
           ),
           const SizedBox(height: 16),
-          Row(
-            children: [
-              Expanded(
-                child: OutlinedButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  style: ButtonStyle(
-                    side: MaterialStateProperty.all(
-                      const BorderSide(
-                        color: PeopleColors.neutral500,
-                      ),
-                    ),
-                  ),
-                  child: Text(
-                    R.string.options,
-                    style: const TextStyle(
-                      color: PeopleColors.neutral900,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: ElevatedButton.icon(
-                  onPressed: controller.generate,
-                  icon: const Icon(Icons.add, size: 18),
-                  label: Text(R.string.newUser),
-                ),
-              ),
-            ],
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton.icon(
+              onPressed: controller.generate,
+              icon: const Icon(Icons.add, size: 18),
+              label: Text(R.string.newUser),
+            ),
           ),
         ],
       ),
