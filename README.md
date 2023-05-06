@@ -1,16 +1,44 @@
-# people_maker
+# People Maker
 
-people_maker use randomuser.me api to generate realistic user profiles, providing easy-to-copy diverse and dynamic data.
+people_maker is a mobile application that uses the randomuser.me API to generate realistic user profiles. It aims to provide developers and designers with easy-to-copy user generated data for various purposes, such as testing, prototyping and design.
+
+![Screenshots](screenshots/combinedd_images.jpg)
+
+## Features
+
+- Generate random user profiles with realistic data
+- Save generated profiles for future reference
+- Remove saved profiles
+- Easily copy generated data for use in other applications
+- Clean and simple user interface
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+These instructions will help you set up the project on your local machine for development and testing purposes.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+- Flutter SDK installed on your machine
+- An IDE with Flutter support (e.g., VS Code, Android Studio, or IntelliJ IDEA)
+- An Android or iOS emulator, or a physical device for running the app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Install the dependencies:
+```bash
+flutter pub get
+```
+
+Run the app on an emulator or a physical device:
+```bash
+flutter run
+```
+
+## Built With
+
+[Flutter](https://flutter.dev/) - The UI toolkit for building natively compiled applications
+
+[randomuser.me](https://randomuser.me/) API - The API used for generating random user profiles
+
+## Contributing
+
+Contributions are always welcome! Feel free to fork the project, make changes, and create a pull request.
