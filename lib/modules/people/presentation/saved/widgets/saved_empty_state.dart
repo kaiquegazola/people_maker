@@ -9,6 +9,7 @@ class SavedEmptyState extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(height: 32),
         Images.noData.image(height: 100),
         const SizedBox(height: 12),
         Text(
