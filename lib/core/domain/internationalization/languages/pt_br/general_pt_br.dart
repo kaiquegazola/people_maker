@@ -9,4 +9,7 @@ class GeneralPtBR implements General {
 
   @override
   String get loading => 'Carregando';
+
+  @override
+  String get settings => 'Configurações';
 }

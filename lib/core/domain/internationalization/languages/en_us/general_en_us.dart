@@ -9,4 +9,7 @@ class GeneralEnUS implements General {
 
   @override
   String get loading => 'Loading';
+
+  @override
+  String get settings => 'Settings';
 }

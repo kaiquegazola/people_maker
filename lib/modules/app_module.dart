@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:isar/isar.dart';
-import 'package:people_maker/core/infra/infra.dart';
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/app_routing.dart';
 
 class AppModule extends Module {
@@ -17,6 +17,9 @@ class AppModule extends Module {
           (i) => HttpDioAdapter(
             dio: i.get(),
           ),
+        ),
+        Bind.singleton(
+          (i) => LanguageController(),
         ),
       ];
 
