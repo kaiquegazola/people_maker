@@ -11,9 +11,7 @@ abstract class GenerateControllerBase with Store {
     required this.generateUser,
     required this.saveUser,
     required this.removeUser,
-  }) {
-    generate();
-  }
+  });
 
   final GenerateUser generateUser;
   final SaveUser saveUser;

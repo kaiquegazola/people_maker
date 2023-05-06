@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:people_maker/modules/people/data/data.dart';
 import 'package:people_maker/modules/people/presentation/presentation.dart';
 
@@ -37,7 +38,9 @@ class PeopleModule extends Module {
             generateUser: i.get<RemoteGenerateUser>(),
             saveUser: i.get<LocalSaveUser>(),
             removeUser: i.get<LocalRemoveUser>(),
-          ),
+          )..generate().whenComplete(
+              FlutterNativeSplash.remove,
+            ),
         ),
         Bind.factory(
           (i) => SavedController(
