@@ -1,0 +1,42 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_native_splash (0.0.1):
+    - Flutter
+  - isar_flutter_libs (1.0.0):
+    - Flutter
+  - lottie-ios (4.2.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
+  - isar_flutter_libs (from `.symlinks/plugins/isar_flutter_libs/ios`)
+  - lottie-ios
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_native_splash:
+    :path: ".symlinks/plugins/flutter_native_splash/ios"
+  isar_flutter_libs:
+    :path: ".symlinks/plugins/isar_flutter_libs/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
+  isar_flutter_libs: b69f437aeab9c521821c3f376198c4371fa21073
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  path_provider_foundation: c68054786f1b4f3343858c1e1d0caaded73f0be9
+
+PODFILE CHECKSUM: e4ac6625e69c7a069a4db2bd83556610becfbb5f
+
+COCOAPODS: 1.12.1
