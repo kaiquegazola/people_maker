@@ -19,7 +19,9 @@ class PeopleRouting {
         ),
         ChildRoute(
           '/saved/',
-          child: (context, args) => const SavedPage(),
+          child: (context, args) => SavedPage(
+            controller: Modular.get<SavedController>(),
+          ),
           transition: TransitionType.noTransition,
         ),
       ],

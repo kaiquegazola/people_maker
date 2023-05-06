@@ -44,6 +44,7 @@ class IsarUserRepository implements UserRepository {
       final users = await isarDb.isarUsers.where().findAll();
       return users.map((isarUser) {
         return UserModel(
+          id: isarUser.id,
           gender: isarUser.gender,
           name: NameModel(
             title: isarUser.name.title!,

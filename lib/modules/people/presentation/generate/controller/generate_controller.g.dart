@@ -23,6 +23,13 @@ mixin _$GenerateController on GenerateControllerBase, Store {
           Computed<String>(() => super.userIdentification,
               name: 'GenerateControllerBase.userIdentification'))
       .value;
+  Computed<String>? _$userAddressComputed;
+
+  @override
+  String get userAddress =>
+      (_$userAddressComputed ??= Computed<String>(() => super.userAddress,
+              name: 'GenerateControllerBase.userAddress'))
+          .value;
 
   late final _$userAtom =
       Atom(name: 'GenerateControllerBase.user', context: context);
@@ -95,7 +102,8 @@ user: ${user},
 isLoading: ${isLoading},
 isSaved: ${isSaved},
 userName: ${userName},
-userIdentification: ${userIdentification}
+userIdentification: ${userIdentification},
+userAddress: ${userAddress}
     ''';
   }
 }

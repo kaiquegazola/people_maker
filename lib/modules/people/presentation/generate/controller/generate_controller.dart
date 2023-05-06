@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+import 'package:people_maker/modules/people/data/data.dart';
 import 'package:people_maker/modules/people/domain/domain.dart';
 
 part 'generate_controller.g.dart';
@@ -24,26 +25,15 @@ abstract class GenerateControllerBase with Store {
   UserEntity? user;
 
   @computed
-  String get userName {
-    final user = this.user;
-    if (user != null) {
-      return '${user.name.first} ${user.name.last}';
-    }
-    return '';
-  }
+  String get userName => UserModel.getUserName(user?.name);
 
   @computed
-  String get userIdentification {
-    final identification = user?.identification;
-    final name = identification?.name;
-    final value = identification?.value;
-    if (name != null && value != null) {
-      return '$name: $value';
-    } else if (value != null) {
-      return value;
-    }
-    return '';
-  }
+  String get userIdentification => UserModel.getUserIdentification(
+        user?.identification,
+      );
+
+  @computed
+  String get userAddress => UserModel.getUserAddress(user?.location);
 
   @observable
   bool isLoading = true;
@@ -64,19 +54,23 @@ abstract class GenerateControllerBase with Store {
 
   @action
   Future<void> save() async {
-    final user = this.user;
-    if (user != null) {
-      if (isSaved) {
-        final id = this.id;
-        if (id != null) {
-          await removeUser.remove(id);
-          isSaved = false;
+    isLoading = true;
+    try {
+      final user = this.user;
+      if (user != null) {
+        if (isSaved) {
+          final id = this.id;
+          if (id != null) {
+            await removeUser.remove(id);
+            isSaved = false;
+          }
+        } else {
+          final savedId = await saveUser.save(user);
+          id = savedId;
+          isSaved = true;
         }
-      } else {
-        final savedId = await saveUser.save(user);
-        id = savedId;
-        isSaved = true;
       }
-    }
+    } catch (_) {}
+    isLoading = false;
   }
 }

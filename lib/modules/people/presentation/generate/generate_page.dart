@@ -33,11 +33,11 @@ class GeneratePage extends StatelessWidget {
                 photo: controller.user?.picture.image,
                 country: controller.user?.location.country,
                 nationality: controller.user?.nat,
-                address: controller.user?.location.street,
+                address: controller.userAddress,
                 email: controller.user?.email,
                 identity: controller.userIdentification,
                 isSaved: controller.isSaved,
-                onSave: controller.save,
+                onUpdate: controller.save,
               );
             },
           ),

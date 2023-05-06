@@ -16,6 +16,7 @@ class UserModel extends UserEntity {
     required super.picture,
     required super.nat,
     required super.dateOfBirth,
+    super.id,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -136,5 +137,32 @@ class UserModel extends UserEntity {
     map['nat'] = nat;
     map['dob'] = dob;
     return map;
+  }
+
+  static String getUserIdentification(IdentificationEntity? identification) {
+    final name = identification?.name;
+    final value = identification?.value;
+    if (name != null && value != null) {
+      return '$name: $value';
+    } else if (value != null) {
+      return value;
+    }
+    return '';
+  }
+
+  static String getUserName(NameEntity? name) {
+    if (name != null) {
+      return '${name.first} ${name.last}';
+    }
+    return '';
+  }
+
+  static String getUserAddress(LocationEntity? location) {
+    final street = location?.street ?? '';
+    final number = location?.number ?? '';
+    final city = location?.city ?? '';
+    final state = location?.state ?? '';
+    final postcode = location?.postcode ?? '';
+    return '$street $number $city $state $postcode';
   }
 }

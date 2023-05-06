@@ -12,7 +12,7 @@ class PeopleCardWidget extends StatelessWidget {
     required this.email,
     required this.identity,
     required this.isSaved,
-    required this.onSave,
+    required this.onUpdate,
     super.key,
   });
 
@@ -25,7 +25,7 @@ class PeopleCardWidget extends StatelessWidget {
   final String? identity;
 
   final bool isSaved;
-  final VoidCallback onSave;
+  final VoidCallback onUpdate;
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +126,7 @@ class PeopleCardWidget extends StatelessWidget {
           Center(
             child: SaveButtonWidget(
               isSaved: isSaved,
-              onSave: onSave,
+              onSave: onUpdate,
             ),
           ),
           const SizedBox(height: 16),

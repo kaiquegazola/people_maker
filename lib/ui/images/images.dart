@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 enum Images {
-  background('wicked_background.svg');
+  background('wicked_background.svg'),
+  noData('no_data.svg');
 
   const Images(this.fileName);
 

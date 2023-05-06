@@ -2,6 +2,7 @@ import 'package:people_maker/modules/people/data/data.dart';
 import 'package:people_maker/modules/people/domain/domain.dart';
 
 const userEntityMock = UserEntity(
+  id: 123,
   gender: 'male',
   name: NameEntity(title: 'Mr', first: 'John', last: 'Doe'),
   location: LocationEntity(
