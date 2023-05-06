@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:people_maker/core/core.dart';
 import 'package:people_maker/modules/people/presentation/generate/generate.dart';
 import 'package:people_maker/ui/ui.dart';
@@ -28,16 +29,22 @@ class GeneratePage extends StatelessWidget {
               if (controller.isLoading) {
                 return const LoadingWidget();
               }
-              return PeopleCardWidget(
-                name: controller.userName,
-                photo: controller.user?.picture.image,
-                country: controller.user?.location.country,
-                nationality: controller.user?.nat,
-                address: controller.userAddress,
-                email: controller.user?.email,
-                identity: controller.userIdentification,
-                isSaved: controller.isSaved,
-                onUpdate: controller.save,
+              return GestureDetector(
+                onTap: () => Modular.to.pushNamed(
+                  '/people/detail',
+                  arguments: controller.user,
+                ),
+                child: PeopleCardWidget(
+                  name: controller.userName,
+                  photo: controller.user?.picture.image,
+                  country: controller.user?.location.country,
+                  nationality: controller.user?.nat,
+                  address: controller.userAddress,
+                  email: controller.user?.email,
+                  identity: controller.userIdentification,
+                  isSaved: controller.isSaved,
+                  onUpdate: controller.save,
+                ),
               );
             },
           ),

@@ -1,7 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:people_maker/core/core.dart';
+import 'package:people_maker/modules/people/domain/domain.dart';
 
 import 'presentation/configuration/configuration.dart';
+import 'presentation/detail/detail.dart';
 import 'presentation/generate/generate.dart';
 import 'presentation/home/home.dart';
 import 'presentation/saved/saved.dart';
@@ -34,6 +36,14 @@ class PeopleRouting {
           transition: TransitionType.noTransition,
         ),
       ],
+    ),
+    ChildRoute<void>(
+      '/detail',
+      child: (context, args) => DetailPage(
+        controller: Modular.get<DetailController>(),
+        languageController: Modular.get<LanguageController>(),
+        user: args.data as UserEntity?,
+      ),
     ),
   ];
 }

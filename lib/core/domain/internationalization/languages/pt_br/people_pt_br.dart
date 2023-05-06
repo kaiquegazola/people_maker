@@ -24,4 +24,43 @@ class PeoplePtBR implements People {
 
   @override
   String get savedSubtitle => 'Veja seus mocks de usuário salvos';
+
+  @override
+  String get address => 'Endereço';
+
+  @override
+  String get cellPhone => 'Celular';
+
+  @override
+  String get copiedToClipboard => 'Copiado para a área de transferência';
+
+  @override
+  String get country => 'País';
+
+  @override
+  String get dateOfBirth => 'Data de nascimento';
+
+  @override
+  String get email => 'E-mail';
+
+  @override
+  String get identification => 'Documento de identificação';
+
+  @override
+  String get photo => 'Foto';
+
+  @override
+  String get name => 'Nome';
+
+  @override
+  String get nationality => 'Nacionalidade';
+
+  @override
+  String get password => 'Senha';
+
+  @override
+  String get phone => 'Telefone';
+
+  @override
+  String get userName => 'Nome de usuário';
 }

@@ -24,4 +24,43 @@ class PeopleEnUS implements People {
 
   @override
   String get savedSubtitle => 'View your saved user mocks';
+
+  @override
+  String get address => 'Address';
+
+  @override
+  String get cellPhone => 'Cellphone';
+
+  @override
+  String get copiedToClipboard => 'Copied to clipboard';
+
+  @override
+  String get country => 'Country';
+
+  @override
+  String get dateOfBirth => 'Date of birth';
+
+  @override
+  String get email => 'E-mail';
+
+  @override
+  String get identification => 'Identity card';
+
+  @override
+  String get photo => 'Photo';
+
+  @override
+  String get name => 'Name';
+
+  @override
+  String get nationality => 'Nationality';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get phone => 'Phone';
+
+  @override
+  String get userName => 'Username';
 }

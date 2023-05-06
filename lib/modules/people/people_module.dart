@@ -1,6 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:people_maker/modules/people/data/data.dart';
+import 'package:people_maker/modules/people/presentation/detail/controller/detail_controller.dart';
 import 'package:people_maker/modules/people/presentation/presentation.dart';
 
 import 'people_routing.dart';
@@ -47,6 +48,9 @@ class PeopleModule extends Module {
             loadUsers: i.get<LocalLoadUsers>(),
             removeUser: i.get<LocalRemoveUser>(),
           ),
+        ),
+        Bind.factory(
+          (i) => DetailController(),
         ),
       ];
 
