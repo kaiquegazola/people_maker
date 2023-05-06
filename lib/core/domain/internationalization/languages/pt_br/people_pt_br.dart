@@ -21,4 +21,10 @@ class PeoplePtBR implements People {
 
   @override
   String get savedItems => 'Salvos';
+
+  @override
+  String get savedEmptyState => 'Você ainda não salvou nenhum usuário gerado';
+
+  @override
+  String get savedSubtitle => 'Veja seus mocks de usuário salvos';
 }

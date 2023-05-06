@@ -21,4 +21,10 @@ class PeopleEnUS implements People {
 
   @override
   String get savedItems => 'Saved';
+
+  @override
+  String get savedEmptyState => 'You have not saved any generated users yet';
+
+  @override
+  String get savedSubtitle => 'View your saved user mocks';
 }

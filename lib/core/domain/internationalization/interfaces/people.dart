@@ -6,4 +6,6 @@ abstract class People {
   String get save;
   String get savedItems;
   String get saved;
+  String get savedSubtitle;
+  String get savedEmptyState;
 }

@@ -33,7 +33,7 @@ class SavedPage extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 flexibleSpace: PageTitleWidget(
                   title: R.string.peopleMaker,
-                  subTitle: 'Veja seus mocks de usuário salvos',
+                  subTitle: R.string.savedSubtitle,
                 ),
               ),
               if (controller.isLoading) ...[

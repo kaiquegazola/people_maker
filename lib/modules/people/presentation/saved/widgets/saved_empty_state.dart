@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:people_maker/core/core.dart';
 import 'package:people_maker/ui/ui.dart';
 
 class SavedEmptyState extends StatelessWidget {
@@ -11,7 +12,7 @@ class SavedEmptyState extends StatelessWidget {
         Images.noData.image(height: 100),
         const SizedBox(height: 12),
         Text(
-          'Você ainda não salvou nenhum usuário gerado',
+          R.string.savedEmptyState,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 color: PeopleColors.neutral050,
               ),
